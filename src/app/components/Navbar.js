@@ -21,7 +21,6 @@ const navItems = [
   { name: "Skills", id: "skills", icon: Zap },
   { name: "Projects", id: "projects", icon: Briefcase },
   { name: "Socials", id: "social", icon: Share2 },
-  { name: "Contact", id: "contact", icon: Mail },
 ];
 
 export default function Navbar() {
