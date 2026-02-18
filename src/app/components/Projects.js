@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Scarpa",
     category: "E-commerce",
-    description: "Scarpa is a modern online shoe store built with Next.js, Firebase, and Tailwind CSS. It offers a seamless shopping experience with product customization, wishlist, order tracking, and multiple payment options.",
+    description: "Scarpa is a modern online shoe store built with Next.js, Firebase, and Tailwind CSS. It offers a seamless shopping experience with order tracking, and multiple payment options.",
     image: "/scarpa.png", 
     tech: [
       { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
