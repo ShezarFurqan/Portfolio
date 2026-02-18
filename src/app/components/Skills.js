@@ -28,11 +28,9 @@ export default function SkillsSection() {
       ref={containerRef}
       className="relative min-h-screen bg-[#000119] flex flex-col items-center justify-center py-24 overflow-hidden"
     >
-      {/* --- 1. GALAXY BACKGROUND ELEMENTS --- */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6B5BFF]/10 rounded-full blur-[120px]" />
         
-        {/* Optimized Star Loop */}
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
@@ -86,7 +84,6 @@ export default function SkillsSection() {
 }
 
 function SkillBadge({ skill, isInView }) {
-  // Variants use karne se code clean aur bug-free rehta hai
   const badgeVariants = {
     initial: { opacity: 0, scale: 0.5, y: 30 },
     animate: (customDelay) => ({
@@ -106,7 +103,7 @@ function SkillBadge({ skill, isInView }) {
         duration: 4,
         repeat: Infinity,
         ease: "easeInOut",
-        delay: customDelay // Floating delay for desync
+        delay: customDelay 
       }
     })
   };
@@ -115,7 +112,6 @@ function SkillBadge({ skill, isInView }) {
     <motion.div
       variants={badgeVariants}
       initial="initial"
-      // Pehle animate (entrance) hoga, phir 'float' start hoga
       animate={isInView ? ["animate", "float"] : "initial"}
       custom={skill.delay}
       whileHover={{ scale: 1.1, rotate: 2 }}

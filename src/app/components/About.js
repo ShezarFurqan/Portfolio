@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Code2, Globe, Cpu, Database, Layout, Sparkles, Server } from "lucide-react";
 
-// --- Configuration ---
 const techStack = [
   { name: "React", icon: Code2, color: "text-blue-400" },
   { name: "Next.js", icon: Globe, color: "text-white" },
@@ -20,37 +19,34 @@ const variants = {
 };
 
 export default function AboutMe() {
-  // Hydration fix for random values (taaki Next.js mein error na aaye)
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
   return (
     <section id="about" className="relative w-full min-h-screen overflow-hidden bg-[#000119] flex items-center justify-center py-20 px-4 sm:px-8 md:px-12">
 
-      {/* 1. ANIMATED BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
-        {/* Deep Space Gradient Mesh */}
+
         <div className="absolute -top-32 -left-32 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] bg-purple-900/20 rounded-full blur-[100px] mix-blend-screen animate-pulse" />
         <div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] bg-blue-900/10 rounded-full blur-[100px] mix-blend-screen" />
 
-        {/* Floating Stars / Particles (FIXED: Using percentages instead of pixels) */}
         {mounted && [...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute bg-white rounded-full opacity-20"
             initial={{
-              left: `${Math.random() * 100}%`, // Responsive positioning
+              left: `${Math.random() * 100}%`, 
               top: `${Math.random() * 100}%`,
               scale: Math.random() * 0.5 + 0.5,
             }}
             animate={{
-              y: [0, -50, 0], // Smooth floating up and down
-              opacity: [0.2, 0.6, 0.2], // Twinkle effect
+              y: [0, -50, 0], 
+              opacity: [0.2, 0.6, 0.2], 
             }}
             transition={{
               duration: Math.random() * 5 + 5,
               repeat: Infinity,
-              ease: "easeInOut", // Smoother than linear
+              ease: "easeInOut", 
             }}
             style={{
               width: `${Math.random() * 3 + 1}px`,
@@ -60,11 +56,9 @@ export default function AboutMe() {
         ))}
       </div>
 
-      {/* 2. MAIN CONTENT CONTAINER (Glassmorphism) */}
       <div className="relative z-10 container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          {/* --- LEFT: AVATAR --- */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,12 +66,9 @@ export default function AboutMe() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative group flex justify-center lg:justify-start"
           >
-            {/* Rotating Glow Ring behind image */}
             <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[2rem] blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700 transform scale-90 group-hover:scale-105" />
 
-            {/* Image Frame (FIXED: Responsive width & aspect ratio) */}
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(139,92,246,0.1)] bg-black/50">
-              {/* Overlay Gradient for moody look */}
               <div className="absolute inset-0  z-10 opacity-80 group-hover:opacity-40 transition-opacity duration-500" />
 
               <img
@@ -87,7 +78,6 @@ export default function AboutMe() {
               />
             </div>
 
-            {/* Floating Badge on Image */}
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -103,7 +93,6 @@ export default function AboutMe() {
           </motion.div>
 
 
-          {/* --- RIGHT: TEXT CONTENT --- */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -111,7 +100,6 @@ export default function AboutMe() {
             transition={{ staggerChildren: 0.15 }}
             className="space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
-            {/* Heading */}
             <motion.div variants={variants}>
               <h2 className="text-xs sm:text-sm font-bold tracking-[0.2em] text-violet-400 uppercase mb-3">
                 // About Me
@@ -121,7 +109,6 @@ export default function AboutMe() {
               </h1>
             </motion.div>
 
-            {/* Subheading */}
             <motion.h3
               variants={variants}
               className="text-lg sm:text-xl md:text-2xl text-gray-300 font-light"
@@ -129,7 +116,6 @@ export default function AboutMe() {
               Hi! I'm <span className="font-semibold text-white">Shezar</span> — Full Stack Developer from Pakistan.
             </motion.h3>
 
-            {/* Description */}
             <motion.p
               variants={variants}
               className="text-gray-400 leading-relaxed text-sm sm:text-base md:text-lg max-w-xl"
@@ -137,7 +123,6 @@ export default function AboutMe() {
               I bridge the gap between <span className="text-violet-300 font-medium">design and engineering</span>. With a focus on <span className="text-violet-300 font-medium">clean code</span> and <span className="text-violet-300 font-medium">aesthetic UI</span>, I build web applications that are both <span className="text-violet-300 font-medium">functional</span> and <span className="text-violet-300 font-medium">immersive</span>. Every detail matters, from smooth interactions to robust architecture, ensuring apps that feel seamless and professional.
             </motion.p>
 
-            {/* 3. INTERACTIVE SKILL TAGS */}
             <motion.div
               variants={variants}
               className="pt-4 w-full"

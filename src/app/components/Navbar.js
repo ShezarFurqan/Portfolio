@@ -15,7 +15,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 
-// Icons add kiye taake mobile par compact aur attractive lage
 const navItems = [
   { name: "Intro", id: "intro", icon: Home },
   { name: "About", id: "about", icon: User },
@@ -38,7 +37,7 @@ export default function Navbar() {
           }
         });
       },
-      { rootMargin: "-50% 0px -50% 0px", threshold: 0 } // center of viewport
+      { rootMargin: "-50% 0px -50% 0px", threshold: 0 } 
     );
 
     sections.forEach(section => {
@@ -62,7 +61,7 @@ export default function Navbar() {
       gsap.to(window, {
         duration: 1.2,      // scroll speed (seconds)
         scrollTo: { y: section, offsetY: 80 }, // offset for fixed navbar
-        ease: "power2.out"  // easing for smooth feeling
+        ease: "power2.out"  
       });
     }
   };
@@ -71,7 +70,6 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center items-center px-4">
-      {/* Outer Glow Effect for "Exceptional" feel */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-violet-500/20 blur-[60px] rounded-full pointer-events-none" />
 
       <motion.nav
@@ -91,7 +89,6 @@ export default function Navbar() {
               className={`relative flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 group ${isActive ? "text-white" : "text-gray-400 hover:text-white"
                 }`}
             >
-              {/* Active Tab Background Pill with Glow */}
               {isActive && (
                 <motion.div
                   layoutId="activeTab"
@@ -100,18 +97,14 @@ export default function Navbar() {
                 />
               )}
 
-              {/* Icon - Always visible */}
               <span className="relative z-10 flex items-center justify-center">
                 <Icon size={18} strokeWidth={2} className={`transition-transform duration-300 ${isActive ? "scale-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" : "group-hover:scale-110"}`} />
               </span>
 
-              {/* Text - Hidden on small mobile, visible on desktop */}
-              {/* "md:block hidden" use kiya hai taake mobile pe clutter na ho */}
               <span className="relative z-10 text-sm font-medium hidden md:block">
                 {item.name}
               </span>
 
-              {/* Bottom Active Light/Dot */}
               {isActive && (
                 <motion.div
                   layoutId="activeGlow"

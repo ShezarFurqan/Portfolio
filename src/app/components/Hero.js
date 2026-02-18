@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { motion } from "framer-motion"; // Star animation ke liye framer-motion use kar rahe hain consistent feel ke liye
+import { motion } from "framer-motion"; 
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -47,13 +47,11 @@ export default function Hero() {
       ref={containerRef}
       className="relative w-full min-h-screen mt-8 flex flex-col items-center justify-center text-center px-4 overflow-hidden bg-[#000119] opacity-0"
     >
-      {/* --- GALAXY BACKGROUND ELEMENTS --- */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Nebula Glows */}
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px]" />
 
-        {/* Animated Stars (Matching your other components) */}
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
@@ -80,9 +78,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* --- CONTENT --- */}
       <div className="relative z-10 flex flex-col items-center">
-        {/* Eyebrow Text */}
         <div
           ref={eyebrowRef}
           className="text-[10px] md:text-xs font-semibold tracking-[0.3em] text-violet-400 uppercase mb-6 drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]"
@@ -90,7 +86,6 @@ export default function Hero() {
           Dynamic Web Magic with Modern Tech
         </div>
 
-        {/* Main Heading */}
         <h1
           ref={headingRef}
           className="text-4xl md:text-6xl lg:text-[80px] font-bold tracking-tight leading-[1.1] text-white max-w-5xl mb-8"
@@ -105,7 +100,6 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* Subheading */}
         <p
           ref={subHeadingRef}
           className="text-base md:text-lg text-gray-300 font-light mb-10 max-w-2xl"
@@ -113,9 +107,7 @@ export default function Hero() {
           Hi, I'm <span className="text-white font-medium">Shezar</span> — Full Stack Developer from Pakistan
         </p>
 
-        {/* Buttons Container */}
         <div ref={buttonRef} className="flex flex-col sm:flex-row items-center gap-4">
-          {/* See My Work Button */}
           <button
             onClick={() => {
               const section = document.getElementById("projects");
@@ -137,7 +129,6 @@ export default function Hero() {
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </button>
-          {/* Download Resume Button */}
           <a
             href="/resume.pdf"
             download="Shezar_Furqan_Resume.pdf"
