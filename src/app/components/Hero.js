@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -104,7 +104,7 @@ export default function Hero() {
           ref={subHeadingRef}
           className="text-base md:text-lg text-gray-300 font-light mb-10 max-w-2xl"
         >
-          Hi, I'm <span className="text-white font-medium">Shezar</span> — Full Stack Developer from Pakistan
+         Hi, we're <span className="text-white font-medium">WebWeavers</span> — Crafting Modern Web Experiences
         </p>
 
         <div ref={buttonRef} className="flex flex-col sm:flex-row items-center gap-4">

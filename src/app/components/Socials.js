@@ -55,7 +55,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    handle: "shezarfurqan@gmail.com",
+    handle: "webweavers883@gmail.com",
     url: "/",
     icon: <SiGmail />,
     color: "#EA4335", 
@@ -138,7 +138,7 @@ export default function ConnectSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-white mb-6"
         >
-          Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-300 drop-shadow-[0_0_10px_rgba(107,91,255,0.5)]">With Me</span>
+          Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-300 drop-shadow-[0_0_10px_rgba(107,91,255,0.5)]">With Us</span>
         </motion.h1>
 
         <motion.p
@@ -147,7 +147,7 @@ export default function ConnectSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gray-400 text-base md:text-lg font-light"
         >
-          Follow my journey, see my code, or just say hi.
+          Follow our journey, see our code, or just say hi.
           <br className="hidden md:block" /> Let's build something amazing together.
         </motion.p>
       </div>

@@ -7,7 +7,7 @@ export default function MiniFooter() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         
         <p className="text-gray-500 text-[11px] tracking-[0.2em] uppercase">
-          © {new Date().getFullYear()} <span className="text-[#6B5BFF] font-bold">SHEZAR</span>
+          © {new Date().getFullYear()} <span className="text-[#6B5BFF] font-bold">WebWeavers</span>
         </p>
 
         <div className="flex gap-6 text-[10px] font-bold text-gray-600 tracking-widest uppercase">
