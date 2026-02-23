@@ -29,7 +29,7 @@ const profiles = [
     name: "Mohammad Haseeb",
     role: "Full Stack Developer", // Updated role
     location: "Pakistan",
-    image: "/blank.png", 
+    image: "/blank.jpeg", 
     isOpenToWork: true,
     highlightText: "Scalable Systems",
     description: "I specialize in building full-stack applications with a focus on high performance and seamless user journeys. By combining modern backend efficiency with interactive frontend animations, I create digital solutions that are powerful, secure, and visually stunning.",
